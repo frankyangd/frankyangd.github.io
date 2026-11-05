@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>看片-看片网站推荐_在线看片资源_高清看片平台</title>
+<meta name="description" content="看片主题首页：梳理在线看片的方式与选择思路，包含高清看片平台、看片资源分类、观看体验与常见问题，帮助访问者快速找到合适的看片入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23131826'/%3E%3Cpath d='M24 18l22 14-22 14z' fill='%23ffb457'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0d1220;
+  --bg-soft:#131a2b;
+  --card:#182136;
+  --line:rgba(255,255,255,.09);
+  --text:#eef2f8;
+  --muted:#9aa7bd;
+  --accent:#ffb457;
+  --accent-2:#5fd0c4;
+  --radius:16px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(13,18,32,.86);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;min-height:66px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:19px;letter-spacing:.5px;}
+.logo-mark{
+  width:36px;height:36px;border-radius:10px;
+  background:linear-gradient(140deg,#ffb457,#ff7a59);
+  display:grid;place-items:center;flex:none;
+}
+.logo-mark svg{width:16px;height:16px;}
+.nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.nav a{
+  font-size:14.5px;color:var(--muted);padding:8px 12px;border-radius:9px;
+  transition:color .2s,background .2s;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--text);background:rgba(255,255,255,.06);}
+.nav .nav-cta{
+  color:#1a1206;background:var(--accent);font-weight:600;
+  padding:8px 16px;
+}
+.nav .nav-cta:hover{background:#ffc477;color:#1a1206;}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(900px 400px at 80% -10%,rgba(255,180,87,.16),transparent 70%),
+    radial-gradient(700px 380px at 0% 0%,rgba(95,208,196,.12),transparent 70%);
+}
+.hero-inner{padding:64px 0 56px;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--accent-2);
+  border:1px solid rgba(95,208,196,.35);
+  border-radius:999px;padding:5px 14px;margin-bottom:18px;
+}
+.eyebrow span{width:6px;height:6px;border-radius:50%;background:var(--accent-2);}
+h1{
+  font-size:clamp(38px,6vw,62px);
+  line-height:1.12;margin:0 0 16px;letter-spacing:2px;
+  background:linear-gradient(100deg,#fff 30%,#ffd9a3 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-lead{font-size:16.5px;color:var(--muted);max-width:34em;margin:0 0 26px;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:11px;font-size:15px;font-weight:600;
+  transition:transform .18s,background .2s,border-color .2s;
+}
+.btn-primary{background:var(--accent);color:#1a1206;}
+.btn-primary:hover{background:#ffc477;transform:translateY(-1px);}
+.btn-ghost{border:1px solid var(--line);color:var(--text);}
+.btn-ghost:hover{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.04);}
+.hero-art{
+  border-radius:22px;border:1px solid var(--line);
+  background:linear-gradient(160deg,#1b2438,#111827);
+  padding:20px;box-shadow:0 24px 60px -30px rgba(0,0,0,.9);
+}
+.hero-art svg{width:100%;height:auto;border-radius:12px;}
+
+/* sections */
+section{padding:64px 0;}
+.section-head{max-width:640px;margin-bottom:32px;}
+.section-head h2{
+  font-size:clamp(23px,3vw,29px);margin:0 0 10px;letter-spacing:.5px;
+}
+.section-head p{margin:0;color:var(--muted);font-size:15.5px;}
+.kicker{
+  font-size:13px;letter-spacing:2px;color:var(--accent);
+  text-transform:uppercase;margin:0 0 10px;font-weight:600;
+}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+  transition:transform .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-3px);border-color:rgba(255,180,87,.3);}
+.card-icon{
+  width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(255,180,87,.12);margin-bottom:16px;
+}
+.card-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:1.8;}
+.card h3{font-size:17.5px;margin:0 0 8px;}
+.card p{margin:0;color:var(--muted);font-size:14.5px;}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step;}
+.step{
+  position:relative;padding:26px 22px 22px;
+  border-radius:var(--radius);border:1px solid var(--line);
+  background:linear-gradient(170deg,#182136,#121a2b);
+}
+.step::before{
+  counter-increment:step;content:"0" counter(step);
+  display:block;font-size:26px;font-weight:700;color:var(--accent);
+  letter-spacing:1px;margin-bottom:10px;opacity:.9;
+}
+.step h3{font-size:16.5px;margin:0 0 8px;}
+.step p{margin:0;color:var(--muted);font-size:14.5px;}
+
+/* list block */
+.panel{
+  border:1px solid var(--line);border-radius:20px;
+  background:linear-gradient(160deg,#151d30,#101827);
+  padding:34px;
+}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+.checklist li{
+  display:flex;gap:12px;font-size:15px;color:var(--muted);
+}
+.checklist li strong{color:var(--text);font-weight:600;}
+.checklist svg{width:19px;height:19px;flex:none;margin-top:3px;stroke:var(--accent-2);fill:none;stroke-width:2;}
+
+/* faq */
+.faq{display:grid;gap:12px;}
+details{
+  border:1px solid var(--line);border-radius:13px;
+  background:var(--card);padding:0 20px;
+}
+details[open]{border-color:rgba(255,180,87,.28);}
+summary{
+  cursor:pointer;list-style:none;padding:16px 0;font-size:15.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--accent);font-size:20px;line-height:1;transition:transform .2s;}
+details[open] summary::after{transform:rotate(45deg);}
+details p{margin:0 0 18px;color:var(--muted);font-size:14.5px;}
+
+/* download */
+.download{
+  display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:20px;padding:30px 34px;
+  background:
+    radial-gradient(500px 200px at 100% 0%,rgba(255,180,87,.16),transparent 70%),
+    #151d30;
+}
+.download h2{margin:0 0 8px;font-size:22px;}
+.download p{margin:0;color:var(--muted);font-size:14.5px;max-width:44em;}
+.btn-disabled{
+  background:rgba(255,255,255,.07);color:#c3cbdb;
+  border:1px solid var(--line);
+  pointer-events:none;cursor:default;
+}
+
+footer{
+  border-top:1px solid var(--line);margin-top:24px;
+  padding:36px 0 44px;background:#0a0f1a;
+}
+.footer-inner{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.footer-brand{font-weight:700;font-size:16px;display:flex;align-items:center;gap:9px;margin-bottom:8px;}
+.footer-brand .logo-mark{width:26px;height:26px;border-radius:8px;}
+.footer-brand .logo-mark svg{width:12px;height:12px;}
+.footer-note{color:var(--muted);font-size:13.5px;margin:0;max-width:36em;}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;color:var(--muted);}
+.footer-links a:hover{color:var(--accent);}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding:48px 0 44px;gap:32px;}
+  .hero-art{order:-1;max-width:420px;}
+  .grid-3,.steps{grid-template-columns:1fr 1fr;}
+  .split{grid-template-columns:1fr;gap:24px;}
+}
+@media (max-width:640px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:10px;padding:12px 0;}
+  .nav{gap:2px;}
+  .nav a{padding:7px 10px;font-size:14px;}
+  .grid-3,.steps{grid-template-columns:1fr;}
+  section{padding:46px 0;}
+  .panel,.download{padding:24px 20px;}
+  .hero-actions .btn{flex:1;justify-content:center;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="看片 首页">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5.5l12 6.5-12 6.5z" fill="#1a1206"/></svg>
+      </span>
+      看片
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#ways">看片方式</a>
+      <a href="#catalog">资源分类</a>
+      <a href="#steps">入门步骤</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#ways">开始看片</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow"><span aria-hidden="true"></span>在线观看指南 · 独立整理</p>
+        <h1>看片</h1>
+        <p class="hero-lead">看片这件事，选择比次数更重要。这里把在线看片的方式、资源类型与观看体验要素拆开讲清楚，帮你在打开页面前就知道自己要找什么，少走弯路。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#ways">了解看片方式</a>
+          <a class="btn btn-ghost" href="#faq">先看常见问题</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 300" role="img" aria-label="看片主题插画">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffb457"/><stop offset="1" stop-color="#ff7a59"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#1f2b45"/><stop offset="1" stop-color="#141c2e"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="10" width="400" height="280" rx="16" fill="url(#g2)"/>
+          <rect x="40" y="46" width="340" height="180" rx="12" fill="#0f1626" stroke="#2a3752"/>
+          <circle cx="210" cy="136" r="38" fill="url(#g1)" opacity="0.95"/>
+          <path d="M198 118l30 18-30 18z" fill="#141c2e"/>
+          <rect x="40" y="242" width="130" height="10" rx="5" fill="#2a3752"/>
+          <rect x="40" y="262" width="220" height="8" rx="4" fill="#22304a"/>
+          <rect x="300" y="240" width="80" height="28" rx="8" fill="none" stroke="#3a4a68"/>
+          <rect x="312" y="251" width="56" height="6" rx="3" fill="#3a4a68"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <section id="ways">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Ways</p>
+        <h2>看片的三种常见方式</h2>
+        <p>不同方式的差别主要在于入口形态、内容组织与使用成本。先确认自己属于哪一种，再决定从哪个页面开始看片。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>网站直接看片</h3>
+          <p>打开浏览器即可播放，不需要额外安装客户端。适合临时看片、在公共设备上使用，也适合先试看再决定是否深入。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>
+          </div>
+          <h3>应用内看片</h3>
+          <p>通过移动端应用进入，通常有更完整的播放控制与记录功能。适合固定设备、固定时段长期看片的使用习惯。</p>
+        </article>
+        <article class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </div>
+          <h3>按清单看片</h3>
+          <p>先整理想看的内容，再逐个打开观看。清单式看片能减少反复翻找，适合有明确目标、时间有限的访问者。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog" style="padding-top:0;">
+    <div class="wrap">
+      <div class="panel split">
+        <div>
+          <p class="kicker">Catalog</p>
+          <h2 style="font-size:clamp(22px,3vw,27px);margin:0 0 12px;">看片资源怎么分类</h2>
+          <p style="color:var(--muted);font-size:15.5px;margin:0 0 20px;">分类不是为了堆数量，而是让你在打开列表时能迅速判断“这类是不是我要的”。常见的划分维度有内容类型、时长形态与更新节奏三种。</p>
+          <ul class="checklist">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+              <span><strong>按内容类型：</strong>剧情、纪录、短片等，先锁定大类再看片，选择效率最高。</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+              <span><strong>按时长形态：</strong>长片与短片对应不同的观看场景，通勤和整块时间要分开安排。</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+              <span><strong>按更新节奏：</strong>追更型与完结型适合不同习惯，边看边等与一次看完的体验差别明显。</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="card" style="background:#101827;">
+            <h3 style="margin-bottom:12px;">看片前的三项确认</h3>
+            <p style="margin:0 0 14px;">开播之前花半分钟确认，通常能省下后面反复切换的时间。</p>
+            <ul class="checklist">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+                <span>确认播放页可正常加载，再进入完整观看。</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+                <span>确认清晰度选项与当前网络匹配，避免中途卡顿。</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg>
+                <span>确认声音、字幕等基础设置符合自己的习惯。</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="steps" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Steps</p>
+        <h2>从想看到开始看片的三步</h2>
+        <p>把看片拆成可执行的小步骤，比直接打开一堆标签页更容易坚持，也更容易判断哪一步出了问题。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>定目标</h3>
+          <p>先写下这次看片想看什么类型、大概多长时间。目标越具体，后面筛选越快。</p>
+        </div>
+        <div class="step">
+          <h3>选入口</h3>
+          <p>根据设备与场景选择网站或应用入口，优先使用自己熟悉、加载稳定的那一个。</p>
+        </div>
+        <div class="step">
+          <h3>做记录</h3>
+          <p>看完后简单记一笔，下次看片时可以直接接着上次的进度，不必重新翻找。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">FAQ</p>
+        <h2>看片常见问题</h2>
+        <p>下面这些问题是访问者在看片前后最常遇到的，答案以通用经验为主，具体以你实际使用的页面为准。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>看片时画面卡顿，先检查什么？</summary>
+          <p>先看当前网络是否稳定，再确认播放页提供的清晰度选项。多数卡顿来自网络波动或清晰度设置过高，逐项排查比直接换页面更有效。</p>
+        </details>
+        <details>
+          <summary>看片需要注册账号吗？</summary>
+          <p>不同入口要求不同。有的页面打开即可观看，有的需要登录后才能保存记录。建议先看页面说明，再决定是否注册。</p>
+        </details>
+        <details>
+          <summary>怎样让看片更有连续性？</summary>
+          <p>把想看的内容整理成清单，并记录每次看到的位置。连续性的关键不是记住全部细节，而是让下一次打开时能快速回到上次的进度。</p>
+        </details>
+        <details>
+          <summary>看片记录保存在哪里？</summary>
+          <p>通常保存在你所使用入口的账号或本地设备中。更换设备或清理浏览器数据前，建议先确认记录是否已同步。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="download">
+        <div>
+          <h2>看片清单模板</h2>
+          <p>包含类型、时长、进度三列的基础清单，方便你在多次看片之间保持连贯。下载入口将在文件就绪后开放。</p>
+        </div>
+        <a class="btn btn-disabled" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5.5l12 6.5-12 6.5z" fill="#1a1206"/></svg>
+        </span>
+        看片
+      </div>
+      <p class="footer-note">一个关于看片的主题首页，整理观看方式、资源分类与使用步骤。页面内容为通用经验说明，不构成对任何具体平台的功能承诺。</p>
+    </div>
+    <nav class="footer-links" aria-label="页尾导航">
+      <a href="#ways">看片方式</a>
+      <a href="#catalog">资源分类</a>
+      <a href="#steps">入门步骤</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
