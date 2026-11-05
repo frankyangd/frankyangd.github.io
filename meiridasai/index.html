@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日大赛主题大赛吃瓜fun聚集地-吃瓜大赛_主题大赛吃瓜聚集地_每日大赛吃瓜入口</title>
+<meta name="description" content="每日大赛主题大赛吃瓜fun聚集地，汇集每日大赛与主题大赛的吃瓜看点、赛程主题与围观入口，按栏目梳理大赛进展与吃瓜话题，方便快速了解每日大赛主题大赛的吃瓜fun内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23161a2b'/%3E%3Ccircle cx='24' cy='28' r='12' fill='%23ff6b6b'/%3E%3Ccircle cx='42' cy='38' r='9' fill='%23ffd166'/%3E%3Cpath d='M14 50c8-8 28-8 36 0' stroke='%2338d9c8' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0f1220;--bg2:#161a2b;--card:#1b2036;--line:#2a3050;
+--text:#eceef7;--muted:#a3aac8;--red:#ff6b6b;--yellow:#ffd166;--teal:#38d9c8;
+--radius:16px;
+}
+body{
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+background:radial-gradient(1200px 600px at 80% -10%,#232a4a 0%,transparent 60%),var(--bg);
+color:var(--text);line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+/* header */
+header.site{position:sticky;top:0;z-index:20;background:rgba(15,18,32,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:18px;min-height:66px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px;letter-spacing:.2px}
+.logo .mark{width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:linear-gradient(135deg,#232a4a,#0f1220);display:grid;place-items:center;border:1px solid var(--line)}
+nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+nav.main a{color:var(--muted);font-size:14px;padding:7px 11px;border-radius:9px;transition:.2s}
+nav.main a:hover{color:var(--text);background:#20263f;text-decoration:none}
+/* hero */
+.hero{padding:52px 0 34px;display:grid;grid-template-columns:1.35fr .9fr;gap:34px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:var(--yellow);background:rgba(255,209,102,.1);border:1px solid rgba(255,209,102,.28);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+h1{font-size:clamp(25px,3.6vw,38px);line-height:1.32;font-weight:800;letter-spacing:-.3px}
+.hero p.lead{color:var(--muted);margin-top:16px;font-size:15.5px;max-width:34em}
+.cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:11px;font-size:14.5px;font-weight:600;transition:.2s;border:1px solid transparent}
+.btn.primary{background:linear-gradient(135deg,var(--red),#ff8f6b);color:#1a1020}
+.btn.primary:hover{filter:brightness(1.08);text-decoration:none}
+.btn.ghost{border-color:var(--line);color:var(--text);background:#1a1f34}
+.btn.ghost:hover{background:#232a48;text-decoration:none}
+.btn[aria-disabled="true"]{opacity:.7;cursor:not-allowed}
+.hero-art{background:var(--bg2);border:1px solid var(--line);border-radius:20px;padding:18px;position:relative;overflow:hidden}
+.hero-art svg{display:block;width:100%;height:auto}
+.hero-art .cap{font-size:12px;color:var(--muted);margin-top:10px;text-align:center}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 44px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.stat b{display:block;font-size:22px;color:var(--yellow);font-weight:800;line-height:1.3}
+.stat span{font-size:13px;color:var(--muted)}
+/* sections */
+section{padding:34px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.sec-head h2{font-size:22px;font-weight:800;letter-spacing:-.2px}
+.sec-head p{color:var(--muted);font-size:14px;max-width:46em;margin-top:6px}
+.kicker{font-size:12px;letter-spacing:1.5px;color:var(--teal);text-transform:uppercase;font-weight:700;display:block;margin-bottom:8px}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px;transition:.2s}
+.card:hover{border-color:#3a4370;transform:translateY(-2px)}
+.card .ico{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:#232a48}
+.card h3{font-size:16px;font-weight:700}
+.card p{font-size:14px;color:var(--muted)}
+.card .meta{font-size:12px;color:#7f88ab;margin-top:auto;padding-top:6px;border-top:1px dashed var(--line)}
+/* list */
+.rows{display:flex;flex-direction:column;gap:12px}
+.row{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 18px;display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center}
+.row .no{font-weight:800;color:var(--red);font-size:15px;font-variant-numeric:tabular-nums}
+.row h3{font-size:15px;font-weight:700}
+.row p{font-size:13.5px;color:var(--muted)}
+.row .st{font-size:12px;padding:4px 10px;border-radius:999px;background:#232a48;color:var(--teal);white-space:nowrap}
+/* prose */
+.prose{display:grid;grid-template-columns:1.5fr 1fr;gap:26px;align-items:start}
+.prose .txt p{color:#c6cbe0;font-size:15px;margin-bottom:14px}
+.prose .txt p strong{color:var(--text)}
+.side{background:var(--bg2);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.side h3{font-size:15px;margin-bottom:12px}
+.side ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.side li{font-size:13.5px;color:var(--muted);padding-left:16px;position:relative}
+.side li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--yellow)}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:600;font-size:14.5px;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";float:right;color:var(--teal);font-weight:700}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);font-size:14px;margin-top:10px}
+/* footer */
+footer.site{border-top:1px solid var(--line);margin-top:30px;padding:30px 0 40px}
+.ft{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;font-size:13.5px;color:var(--muted)}
+.ft .brand{font-weight:700;color:var(--text);font-size:14.5px;margin-bottom:8px}
+.ft a{color:var(--muted)}
+.ft a:hover{color:var(--teal)}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr;padding-top:34px}
+.grid{grid-template-columns:1fr 1fr}
+.prose{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+.grid{grid-template-columns:1fr}
+.stats{grid-template-columns:1fr}
+.row{grid-template-columns:1fr;gap:6px}
+.row .st{justify-self:start}
+nav.main{margin-left:0;width:100%;overflow-x:auto;padding-bottom:6px}
+.logo{font-size:14px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap hd">
+    <div class="logo">
+      <span class="mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="13" r="7" fill="#ff6b6b"/>
+          <circle cx="21" cy="19" r="5" fill="#ffd166"/>
+          <path d="M6 26c5-5 15-5 20 0" stroke="#38d9c8" stroke-width="2.6" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>每日大赛主题大赛吃瓜fun聚集地</span>
+    </div>
+    <nav class="main" aria-label="主导航">
+      <a href="#today">今日吃瓜</a>
+      <a href="#topics">主题大赛</a>
+      <a href="#board">吃瓜榜</a>
+      <a href="#guide">围观指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero" aria-labelledby="h1">
+      <div>
+        <span class="tag">🍉 吃瓜fun · 围观进行中</span>
+        <h1 id="h1">每日大赛主题大赛吃瓜fun聚集地</h1>
+        <p class="lead">这里是每日大赛主题大赛吃瓜fun聚集地：把每日大赛的当日赛题、主题大赛的创意看点与吃瓜话题放在同一处，按栏目整理，方便你快速找到想围观的那一场。看主题、追进展、聊吃瓜，一站逛完。</p>
+        <div class="cta">
+          <a class="btn primary" href="#today">进入今日吃瓜 →</a>
+          <a class="btn ghost" href="#topics">看主题大赛看点</a>
+          <a class="btn ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none">下载</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#232a4a"/><stop offset="1" stop-color="#161a2b"/>
+            </linearGradient>
+          </defs>
+          <rect x="4" y="4" width="312" height="212" rx="16" fill="url(#g1)"/>
+          <circle cx="96" cy="84" r="34" fill="#ff6b6b" opacity=".92"/>
+          <circle cx="96" cy="84" r="34" fill="none" stroke="#ffd166" stroke-width="2" opacity=".5"/>
+          <circle cx="196" cy="120" r="24" fill="#ffd166" opacity=".9"/>
+          <path d="M60 168c34-22 96-22 130 0" stroke="#38d9c8" stroke-width="5" fill="none" stroke-linecap="round"/>
+          <rect x="150" y="46" width="118" height="10" rx="5" fill="#3a4370"/>
+          <rect x="150" y="66" width="86" height="10" rx="5" fill="#2a3050"/>
+          <rect x="150" y="86" width="104" height="10" rx="5" fill="#2a3050"/>
+          <circle cx="286" cy="52" r="7" fill="#38d9c8"/>
+        </svg>
+        <div class="cap">吃瓜热度 · 主题创意 · 每日赛题</div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="stat"><b>每日更新</b><span>当日赛题与吃瓜看点同步整理</span></div>
+      <div class="stat"><b>主题分区</b><span>按创意主题分组，逐场围观</span></div>
+      <div class="stat"><b>吃瓜榜单</b><span>按讨论热度排列围观顺序</span></div>
+    </div>
+
+    <section id="today">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Today</span>
+          <h2>今日吃瓜：每日大赛看点速览</h2>
+          <p>每日大赛的变化主要发生在赛题与围观话题两处。下面把当天值得先看的几条整理出来，作为进入每日大赛主题大赛吃瓜fun聚集地的第一站。</p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <span class="no">01</span>
+          <div>
+            <h3>赛题公布后的第一波讨论</h3>
+            <p>新赛题一出，最先热起来的往往是“这题怎么解读”。把题目关键词拆开看，能更快跟上前面的讨论节奏。</p>
+          </div>
+          <span class="st">吃瓜进行中</span>
+        </div>
+        <div class="row">
+          <span class="no">02</span>
+          <div>
+            <h3>主题创意的高频方向</h3>
+            <p>主题大赛的看点集中在创意角度：同一主题下，有人走叙事，有人走视觉，有人做反差，方向差异本身就是吃瓜点。</p>
+          </div>
+          <span class="st">持续围观</span>
+        </div>
+        <div class="row">
+          <span class="no">03</span>
+          <div>
+            <h3>围观动线怎么排</h3>
+            <p>先看今日赛题，再看主题分区，最后翻吃瓜榜补漏。这条动线适合时间不多、只想抓重点的访问者。</p>
+          </div>
+          <span class="st">建议路线</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="topics">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Topics</span>
+          <h2>主题大赛分区：按创意方向围观</h2>
+          <p>主题大赛以“主题”为组织单位。下面按常见创意方向划分三个围观分区，每个分区承担不同的看点任务，方便你直接跳到自己感兴趣的那一类。</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 20V8l8-4 8 4v12" stroke="#38d9c8" stroke-width="2" stroke-linejoin="round"/><path d="M9 20v-6h6v6" stroke="#ffd166" stroke-width="2"/></svg>
+          </span>
+          <h3>叙事主题区</h3>
+          <p>围绕故事与情节展开的主题，看点在起承转合是否立得住。适合喜欢顺着看完整条线索的吃瓜者。</p>
+          <span class="meta">看点：结构 · 情节 · 收尾</span>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#ff6b6b" stroke-width="2"/><path d="M12 4v16M4 12h16" stroke="#ffd166" stroke-width="1.6"/></svg>
+          </span>
+          <h3>视觉主题区</h3>
+          <p>以画面、色彩与构成为核心的主题。同一主题下风格差异越大，讨论越热闹，适合快速浏览与对比。</p>
+          <span class="meta">看点：风格 · 配色 · 构图</span>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 15l5-5 4 4 5-6" stroke="#38d9c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 20h14" stroke="#ff6b6b" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>反差创意区</h3>
+          <p>用意外角度处理常规主题，吃瓜乐趣在于“没想到还能这样”。这部分往往是讨论扩散最快的地方。</p>
+          <span class="meta">看点：角度 · 反差 · 记忆点</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="board">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Board</span>
+          <h2>吃瓜榜：按讨论热度排个序</h2>
+          <p>榜单位置不代表最终评价，只反映围观讨论的先后顺序。每日大赛主题大赛吃瓜fun聚集地的榜单用于安排阅读次序，而不是给主题下结论。</p>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <span class="no">TOP1</span>
+          <div>
+            <h3>同一主题下的两种解法</h3>
+            <p>方向完全相反，却都能自圆其说。讨论焦点落在“哪种更贴合主题”上，是当日最集中的吃瓜话题。</p>
+          </div>
+          <span class="st">热度高</span>
+        </div>
+        <div class="row">
+          <span class="no">TOP2</span>
+          <div>
+            <h3>被低估的细节处理</h3>
+            <p>整体不抢眼，但在细节上做了不少功夫。这类内容通常在讨论后半段被重新翻出来，值得回看。</p>
+          </div>
+          <span class="st">后劲足</span>
+        </div>
+        <div class="row">
+          <span class="no">TOP3</span>
+          <div>
+            <h3>赛题误读引发的讨论</h3>
+            <p>部分讨论源于对赛题的不同理解。把题目原文再读一遍，往往能省下不少来回争辩的时间。</p>
+          </div>
+          <span class="st">待澄清</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">Guide</span>
+          <h2>围观指南：怎么逛这个聚集地</h2>
+        </div>
+      </div>
+      <div class="prose">
+        <div class="txt">
+          <p><strong>先看赛题，再看主题。</strong>每日大赛的赛题是理解后续讨论的前提，主题大赛的主题则决定了看点的方向。先花几分钟把当日赛题读清楚，再进入主题分区，吃瓜效率会明显更高，也不容易被片面的说法带偏。</p>
+          <p><strong>用分区替代漫无目的刷。</strong>每日大赛主题大赛吃瓜fun聚集地把内容按叙事、视觉、反差三类主题分开，目的不是分类本身，而是让你在有限时间里挑到想看的那一类。喜欢看结构的进叙事区，喜欢看风格的进视觉区。</p>
+          <p><strong>把榜单当路线，不当结论。</strong>吃瓜榜按讨论热度排序，热度高不等于水平高，只说明讨论更集中。逐条对照原文与赛题，再决定自己站哪一边，是更稳妥的围观方式。</p>
+          <p><strong>吃瓜也留余地。</strong>主题大赛的评判往往涉及主观判断，同一份内容在不同视角下结论可能不同。这个聚集地呈现的是讨论与看点，观点部分交给读者自己判断，事实部分以赛题原文和公开内容为准。</p>
+        </div>
+        <aside class="side">
+          <h3>围观动线清单</h3>
+          <ul>
+            <li>① 读当日赛题原文，明确主题范围</li>
+            <li>② 选一个主题分区进入，避免全站乱翻</li>
+            <li>③ 记录两三个印象点，方便之后对照</li>
+            <li>④ 翻吃瓜榜补漏，回看被低估的内容</li>
+            <li>⑤ 有争议处回到赛题，减少误读</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="sec-head">
+        <div>
+          <span class="kicker">FAQ</span>
+          <h2>常见问题</h2>
+        </div>
+      </div>
+      <details>
+        <summary>每日大赛和主题大赛是同一件事吗？</summary>
+        <p>两者侧重点不同。每日大赛强调按天更新的赛题与进展，主题大赛强调围绕特定主题展开的创意内容。本页把两者放在一起呈现，便于对照围观。</p>
+      </details>
+      <details>
+        <summary>吃瓜榜的名次是怎么定的？</summary>
+        <p>按讨论热度排列，反映围观先后顺序，不代表对主题内容的最终评价。具体判断请结合赛题原文自行得出。</p>
+      </details>
+      <details>
+        <summary>“吃瓜fun”在这里指什么？</summary>
+        <p>指围观过程中的讨论乐趣：看不同解法、比较角度、交换看法。它描述的是内容氛围，不构成对任何参赛内容的评价结论。</p>
+      </details>
+      <details>
+        <summary>下载入口现在能用吗？</summary>
+        <p>下载入口暂未开放，当前按钮保持禁用状态，后续替换为真实地址后再开放使用。</p>
+      </details>
+    </section>
+
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap ft">
+    <div>
+      <div class="brand">每日大赛主题大赛吃瓜fun聚集地</div>
+      <p>整理每日大赛与主题大赛的看点与讨论，按栏目呈现，方便围观与对照。</p>
+    </div>
+    <div>
+      <p><a href="#today">今日吃瓜</a> · <a href="#topics">主题大赛</a> · <a href="#board">吃瓜榜</a> · <a href="#guide">围观指南</a> · <a href="#faq">常见问题</a></p>
+      <p style="margin-top:8px">每日大赛主题大赛吃瓜fun聚集地 · 内容以赛题原文与公开信息为准</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
